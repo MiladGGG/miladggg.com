@@ -79,7 +79,7 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "Hey, i'm Milad 👋"
+    Title: "Hey, I'm Milad 👋"
     Content: >
       USYD Computer Science major 🇦🇺, avid developer 👨‍💻
 
