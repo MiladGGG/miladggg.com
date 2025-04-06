@@ -1,7 +1,7 @@
 # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
 baseURL: "https://miladggg.com"
-title: MiladGGG.com
+title: Milad Ghasembeigi
 copyright: "© [PaperMod Contributors](https://github.com/adityatelange/hugo-PaperMod/graphs/contributors)"
 paginate: 5
 theme: [hugo-PaperMod]
@@ -79,7 +79,7 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "Milad Ghasembeigi"
+    Title: "Hey, i'm Milad 👋"
     Content: >
       USYD Computer Science major 🇦🇺, avid developer 👨‍💻
 
