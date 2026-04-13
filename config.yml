@@ -81,9 +81,9 @@ params:
   homeInfoParams:
     Title: "Hey, I'm Milad 👋"
     Content: >
-      USYD Computer Science major 🇦🇺, avid developer 👨‍💻
+      USYD Computer Science major (currently in my 3rd year!) 🇦🇺, avid developer 👨‍💻
 
-      - **Key Skills:**  Python, C, C++, Java, JavaScript, Node.js, React
+      - **Key Skills:**  Typescript, Next.js, React, Python, Java, C, C++
 
       - Always learning new languages/frameworks!
 
@@ -159,8 +159,9 @@ markup:
 #     disabled: false
 #     privacyEnhanced: true
 
+
 services:
   instagram:
     disableInlineCSS: true
-  twitter:
+  x:
     disableInlineCSS: true
