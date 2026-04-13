@@ -5,8 +5,8 @@ date: "2025-03-27"
 description: "Overview of my Steam Connect project"
 FAtags: ["javascript", "web", "server"]
 FAcategories: ["web"]
-FAseries: ["Themes Guide"]
-aliases: ["migrate-from-jekyl"]
+FAseries: [""]
+aliases: [""]
 ShowToc: true
 TocOpen: true
 weight: 2

@@ -5,8 +5,8 @@ date: "2026-04-07"
 description: "My experience with creating Camo Note"
 FAtags: ["web", "app"]
 FAcategories: ["web"]
-FAseries: ["Themes Guide"]
-aliases: ["migrate-from-jekyl"]
+FAseries: [""]
+aliases: [""]
 ShowToc: true
 TocOpen: false
 weight: 2

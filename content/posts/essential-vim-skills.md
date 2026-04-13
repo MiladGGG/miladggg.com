@@ -5,8 +5,8 @@ date: "2024-11-19"
 description: "Run-down of my most used Vim (Neovim) skills"
 FAtags: ["vim"]
 FAcategories: [""]
-FAseries: ["Themes Guide"]
-aliases: ["migrate-from-jekyl"]
+FAseries: [""]
+aliases: [""]
 ShowToc: true
 TocOpen: true
 weight: 2
