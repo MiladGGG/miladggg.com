@@ -1,125 +1,66 @@
 ---
 author: "Milad"
-title: "Why I went from VSCode to Vim to Nvim to AstroNvim"
-date: "2024-11-19"
-description: "Run-down of my most used Vim (Neovim) skills"
+title: "Why I went from VS Code to Vim to Neovim to AstroNvim"
+date: "2026-02-24"
+description: "Overview of the editors I've went through"
 FAtags: ["vim"]
 FAcategories: [""]
-FAseries: ["Themes Guide"]
-aliases: ["migrate-from-jekyl"]
+FAseries: [""]
+aliases: [""]
 ShowToc: true
 TocOpen: true
 weight: 2
 ---
 
 
-This blog post contains the most useful Vim keybinds. You'll also find the most useful Neovim command-mode tricks. All of this has been gathered from my personal experience tinkering with Vim.  
-Note: this post skips over the very basic commands. 
+## The VS Code Problem
+So as with most programmers, I started with VS Code. It's worked. 
+Buuuut, I slowly got sick of some quirks of the IDE:
+- Getting AI agents shoved in my face
+- Slow start up times
+- Too many UI elements
+- New version pop-ups
+- Pop-ups in general
 
-<!--more-->
-# Keybinds
-### Store and Load Registers
-Vim can store registers that contain blocks of text you have highlighted in visual mode. 
+In all fairness, most of these can be resolved within the IDE. And I do still use VS Code occasionally. However, this was enough to start my quest for the perfect text editor.
 
+## The Vim Problem
+In my very first university programming class, my tutors restricted us to only using Vim. At first, me and all my other classmates hated this. No clicking around. No buttons. No code completion. 
 
-**Store Selected to Register:** ```"<character>y```  
-**Paste from Register:** ```"<character>p```  
-*(\<character> is a letter or number, used as a register)*
+However, it soon became fun. Typing a file with no syntax errors became an accomplishment. Learning new key-strokes became a skill. And overall, I became a natural at making small edits to files.
 
-This can be useful for storing boilerplate code.
+Buuuut, Vim's shortcomings started to arise:
+- Not enough colour 😔 
+- Limited customisation
+- Bad with larger projects
+- Constantly need to exit for terminal
 
+## The Neovim Problem
+Neovim solved a lot of my problems with Vim. To be honest, I mainly just wanted to install some colourful themes.
 
-### Autofill
-Vim can autofill in two ways:  
+At this stage, I was very proficient at editing and navigating small files.
 
-Searches the rest of the file for a word(s) that would complete  
-**Complete Word:** ```CTRL-p```  
+Buuuut, raw Neovim couldn't hold up because of:
+- Difficulty navigating large projects
+- No autocomplete (for OOP)
+- Friction in traversing files across directories
+- Limited customisation
 
-While in Insert-Mode, copy the above character  
-**Copy Character:** ```CTRL-y```  
+## The AstroNvim Solution
+AstroNvim is a popular configuration for NeoVim. Basically, it's Neovim with a bunch of cool plugins and extra features. I went for AstroNvim for it's focus on aesthetics, but any popular config will have similar features.
 
-
-First method is highly useful. Second is kinda just for fun.
-
-
-### Scroll
-Scroll half a page using:  
-
-**Scroll 1/2 Page Up:** ```CTRL-u```  
-**Scroll 1/2 Page Down:** ```CTRL-d```  
-### Marks
-You can set marks in your code to jump to:
-
-**Set Mark:** ```m<character>```  
-**Jump to Mark:** ``` `<character>```  
-*(\<character> is a letter or number, used as a register)*
-
-### Line Jumps
-You can jump using line numbers:
-
-**Jump to Line:** ```<LineNum>G```  
-*Example Usage:* ```95G```, jumps to line 95
+AstroNvim was just right for me. It combines the lightweight experience of Vim with the context and control of VS Code. To say it simply: I now get to make quick edits and jump around files/directories when needed. Along with various other features such as: a sidebar, autocomplete, buffer navigation and Git integration. Perfect.
 
 
+## Was it even worth it?
+Learning Vim commands, configuring plugins and mastering key-strokes all takes a LOT of time. So it's valid to ask, is it even worth spending all this time to optimise code editing?
 
-### Quick Write and Quit
-Rather than needing to type out the command ```:wq```and hitting enter, you can save some time with quick write-quit:  
-
-**Write & Quit:** ```ZZ```  
-*(make sure it's uppercase)*
+Although there was a steep learning curve, I would say I'm overall a lot faster at editing code. Additionally, it's a lot more fun and satisfying to use a keyboard only editor, like Neovim. And on top of that, not relying on fancy IDE's did make me a more well-rounded programmer.
 
 
+## Should you do the same?
+If you have the same pain points and needs as I do, trying any popular Neovim config would be a worthwhile venture, in my opinion.
 
+But of course, you can still have a wonderful programming career without ever touching anything other than VS Code or your IDE of choice.
 
-# Commands
-### Edit Different File
-Going from one file to another without exiting Vim is crucial. 
-
-**Edit File:** ```:edit <file>``` or just ```:e <file>```
-
-### Shell & Terminal
-While editing, you can seamlessly access your shell without exiting Vim.
-
-You can run a command and view it's output with:  
-**Run command:** ```:!<command>```  
-*Example Usage:* ```:!echo Hello```
-
-You can transform the entire text editor into a terminal with:  
-**Switch to Terminal** ```:terminal``` or just ```:ter```  
- *(Neovim only)*
-
-
-### Splitting
-You can split your file many times in order to edit/view multiple files from the same window.
-
-
-Split with another file, same file if no file is specified:  
-**Split:** ```:split <file>```  
-**Vertical Split:** ```:vsplit <file>```
-
-Interact with split windows:  
-**Jump to next window:** ```CTRL-w-w```  
-**Jump in direction:** ```CTRL-w-(hjkl)```
-
-**Vertically resize window:** ```CTRL-w-(+ or - )```  
-**Horizontally resize window:** ```CTRL-w-(> or <)```
-
-
-Splitting is especially useful with ```:terminal```
-
-### Find and Replace (Substitute)
-You can perform a find and replace using:  
-
-**All-Lines Substitute:** ```:%s/<find>/<replace>```  
-*Example Usage:* ```:%s/public int/private int```, swapping public integers to private integers
-
-
-### Escape Re-bind
-Pressing the escape key to exit insert mode is quite inefficient on my keyboard. You can rebind this to another key, or even a combination of keys.
-
-**Escape Re-Map:** ```ionoremap jk <Esc>```  
-Put this command in your Vim config file.
-
-You can choose what you like, but many Vim users like to use 'j' and 'k' to exit insert mode. All you have to do is write "jk" quickly in insert mode.  
-
-
+(P.S, I'd recommend avoiding Cursor and other AI agents if you're trying to improve your coding skills 🫤)
