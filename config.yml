@@ -94,6 +94,10 @@ params:
     - name: LinkedIn
       title: Connect with me on LinkedIn
       url: "https://www.linkedin.com/in/milad-ghasembeigi"
+    - name: camonote
+      title: Check out my privacy writing app!
+      url: "https://camonote.miladggg.com"
+
 
 
   # label:
